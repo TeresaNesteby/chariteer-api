@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
-  get 'organizations/index'
+  scope "/api" do
+    # resources :sessions
 
-  get 'organizations/new'
+    get 'bananas/:much_banana' => 'volunteers#bananas'
 
-  get 'organizations/show'
+    resources :volunteers, :except => :new
 
-  get 'organizations/edit'
+    resources :organizations do
+      resources :events
+    end
+
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
