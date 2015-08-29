@@ -3,7 +3,8 @@ class CreateOrganizations < ActiveRecord::Migration
     create_table :organizations do |t|
       t.string :name
       t.string :mission_statement
-      t.string :phone_numberemail
+      t.string :phone_number
+      t.string :email
       t.string :website_url
       t.boolean :non_profit
       t.string :password_digest
