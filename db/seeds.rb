@@ -30,3 +30,10 @@ Organization.create(name:"Recovery Survival Network", password: "123", mission_s
 # Sports & Recreation
 Organization.create(name:"American SCORES Bay Area", password: "123",  mission_statement:"America SCORES inspires urban youth to lead healthy lives, be engaged students, and have the confidence and character to make a difference in the world.", email: "Shannon@gmail.com", phone_number: "760 914 3154", website_url:"http://www.americascoresbayarea.org", non_profit: true)
 Organization.create(name:"Multiple Sclerosis Association of America", password: "123",  mission_statement:"The Multiple Sclerosis Association of America (MSAA) is a leading resource for the entire MS community, improving lives today through vital services and support.", email:"Erica@gmail.com", phone_number: "(800) 532-7667", website_url:"http://support.mymsaa.org/volunteer", non_profit: true)
+
+
+Category.create(category_type: "Health")
+Category.create(category_type: "Animals")
+Category.create(category_type: "Kids")
+Category.create(category_type: "Food")
+Category.create(category_type: "Human Rights")
