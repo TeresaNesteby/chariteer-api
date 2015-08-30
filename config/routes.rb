@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :volunteers, :except => :new
 
     resources :organizations do
-      resources :events
+      resources :events, :except => [:new, :edit]
     end
 
   end
