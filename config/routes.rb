@@ -4,10 +4,12 @@ Rails.application.routes.draw do
 
     get 'bananas/:much_banana' => 'volunteers#bananas'
 
+    resources :categories, only: [:index, :show]
+
     resources :volunteers, :except => :new
 
     resources :organizations do
-      resources :events
+      resources :events, :except => [:new, :edit]
     end
 
   end
