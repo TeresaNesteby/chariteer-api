@@ -37,3 +37,10 @@ Category.create(category_type: "Animals")
 Category.create(category_type: "Kids")
 Category.create(category_type: "Food")
 Category.create(category_type: "Human Rights")
+
+
+Event.create(name: "taco festival", category_type: 4, organization_id:4, volunteer_id: 1)
+Event.create(name: "save the whales", category_type: 2, organization_id:2, volunteer_id: 2)
+Event.create(name: "community keeps growing", category_type: 3, organization_id:2, volunteer_id: 2)
+Event.create(name: "basketball tournament for kids", category_type: 3, organization_id:3, volunteer_id: 1)
+Event.create(name: "liberty and justice for all", category_type: 5, organization_id:7, volunteer_id: 1)
