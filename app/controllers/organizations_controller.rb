@@ -1,21 +1,15 @@
 class OrganizationsController < ApplicationController
-  include SessionsHelper
   def index
+    organizations = Organization.all
+    render json: organizations, status: 200
   end
 
-  def new
-    @organization = Organization.new
-  end
-
-  def show
-    @organization = Organization.new(organization_params)
-    if @organization.save
-      session[:id] = @organization.id
-      redirect_to @organization #somewhere
-      # ie: redirect_to @organization
+  def create
+    organization = Organization.new(organization_params)
+    if organization.save
+      render json: organization, status: 201
     else
-      flash[:error] = "email or password is wrong"
-      render 'new'
+      render status: 404
     end
   end
 
@@ -24,6 +18,6 @@ class OrganizationsController < ApplicationController
 
   private
   def organization_params
-    params.require(:organization).permit(:name, :mission_statement, :contact_email, :password, :non_profit, :website)
+    params.require(:organization).permit(:name, :mission_statement, :phone_number, :email, :password, :non_profit, :website_url)
   end
 end
