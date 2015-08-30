@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Volunteers
-Volunteer.create(first_name: "Teresa", last_name: "nesteby", email: "teresa@gmail.com", password: "123")
-Volunteer.create(first_name: "Gai", last_name: "Vien", email: "gai@gmail.com", password: "123")
+Volunteer.create(photo_url: "http://designurge.com/wp-content/uploads/2014/03/smiley-face-wallpaper-001-268x300.jpg", first_name: "Teresa", last_name: "nesteby", email: "teresa@gmail.com", password: "123")
+Volunteer.create(photo_url: "http://designurge.com/wp-content/uploads/2014/03/smiley-face-wallpaper-001-268x300.jpg",first_name: "Gai", last_name: "Vien", email: "gai@gmail.com", password: "123")
 
 
 # Animals
