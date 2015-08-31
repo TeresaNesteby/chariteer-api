@@ -1,7 +1,8 @@
 class EventsController < ApplicationController
 
   def index
-    events = Event.all
+    organization = Organization.find(params[:organization_id])
+    events = organization.events
     render json: events, status: 200
   end
 
