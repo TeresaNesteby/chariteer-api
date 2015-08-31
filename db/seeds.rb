@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Volunteers
-Volunteer.create(photo_url: "http://designurge.com/wp-content/uploads/2014/03/smiley-face-wallpaper-001-268x300.jpg", first_name: "Teresa", last_name: "nesteby", email: "teresa@gmail.com", password: "123")
-Volunteer.create(photo_url: "http://designurge.com/wp-content/uploads/2014/03/smiley-face-wallpaper-001-268x300.jpg",first_name: "Gai", last_name: "Vien", email: "gai@gmail.com", password: "123")
+Volunteer.create(photo_url: "http://designurge.com/wp-content/uploads/2014/03/smiley-face-wallpaper-001-268x300.jpg", first_name: "Teresa", last_name: "nesteby", email: "teresa@gmail.com", password: "123", interest: "Food")
+Volunteer.create(photo_url: "http://designurge.com/wp-content/uploads/2014/03/smiley-face-wallpaper-001-268x300.jpg",first_name: "Gai", last_name: "Vien", email: "gai@gmail.com", password: "123", interest: "Hiking")
 
 
 # Animals
@@ -39,8 +39,8 @@ Category.create(category_type: "Food")
 Category.create(category_type: "Human Rights")
 
 
-Event.create(name: "taco festival", category_type: 4, organization_id:4, volunteer_id: 1)
-Event.create(name: "save the whales", category_type: 2, organization_id:2, volunteer_id: 2)
-Event.create(name: "community keeps growing", category_type: 3, organization_id:2, volunteer_id: 2)
-Event.create(name: "basketball tournament for kids", category_type: 3, organization_id:3, volunteer_id: 1)
-Event.create(name: "liberty and justice for all", category_type: 5, organization_id:7, volunteer_id: 1)
+Event.create(name: "taco festival", category_id: 4, organization_id:4, volunteer_id: 1)
+Event.create(name: "save the whales", category_id: 2, organization_id:2, volunteer_id: 2)
+Event.create(name: "community keeps growing", category_id: 3, organization_id:2, volunteer_id: 2)
+Event.create(name: "basketball tournament for kids", category_id: 3, organization_id:3, volunteer_id: 1)
+Event.create(name: "liberty and justice for all", category_id: 5, organization_id:7, volunteer_id: 1)
