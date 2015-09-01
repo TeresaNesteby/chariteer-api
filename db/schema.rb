@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150830225734) do
+ActiveRecord::Schema.define(version: 20150831235721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,13 @@ ActiveRecord::Schema.define(version: 20150830225734) do
     t.integer  "organization_id"
     t.string   "name"
     t.integer  "volunteer_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "org_name"
+    t.string   "location"
+    t.date     "date"
+    t.time     "times"
+    t.integer  "num_of_volunteers_needed"
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -42,6 +47,13 @@ ActiveRecord::Schema.define(version: 20150830225734) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.string   "logo_image"
+  end
+
+  create_table "participants", force: :cascade do |t|
+    t.integer  "volunteer_id"
+    t.integer  "event_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "volunteers", force: :cascade do |t|
