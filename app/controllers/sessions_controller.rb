@@ -1,9 +1,4 @@
 class SessionsController < ApplicationController
-  def new
-  end
-
-  def index
-  end
 
   def create
      volunteer = Volunteer.find_by(email: params[:volunteer][:email])
