@@ -30,6 +30,6 @@ class VolunteersController < ApplicationController
 
     private
     def volunteer_params
-      params.require(:volunteer).permit(:first_name, :last_name, :email, :password)
+      params.require(:volunteer).permit(:first_name, :last_name, :email, :interest, :photo_url, :password)
     end
 end
