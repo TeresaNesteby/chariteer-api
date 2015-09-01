@@ -1,25 +1,26 @@
 class ApplicationController < ActionController::API
-  # def current_volunteer
-  #   @current_volunteer ||=Volunteer.find_by(id: session[:id]) if session[:id]
-  # end
 
-  # def current_organization
-  #   @current_organization ||=Organization.find_by(id: session[:id]) if session[:id]
-  # end
+before_action :cors_preflight_check
+after_filter :cors_set_access_control_headers
 
-  before_filter :add_allow_credentials_headers
 
-  def add_allow_credentials_headers
-    # https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#section_5
-    # http://stackoverflow.com/questions/25045681/xmlhttprequest-no-access-control-allow-origin-header-is-present-on-the-request
-    # Because we want our front-end to send cookies to allow the API to be authenticated
-    # (using 'withCredentials' in the XMLHttpRequest), we need to add some headers so
-    # the browser will not reject the response
-    response.headers['Access-Control-Allow-Origin'] = request.headers['Origin'] || '*'
-    response.headers['Access-Control-Allow-Credentials'] = 'true'
+private
+
+
+  def cors_set_access_control_headers
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, PATCH, DELETE, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization, Token, Auth-Token, Email'
+    response.headers['Access-Control-Max-Age'] = "1728000"
   end
 
-  # def options
-  #   head :status => 200, :'Access-Control-Allow-Headers' => 'accept, content-type'
-  # end
+  def cors_preflight_check
+    if request.method == 'OPTIONS'
+      request.headers['Access-Control-Allow-Origin'] = '*'
+      request.headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, PATCH, DELETE, OPTIONS'
+      request.headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version, Token, Auth-Token, Email'
+      request.headers['Access-Control-Max-Age'] = '1728000'
+      # render :text => '', :content_type => 'text/plain'
+    end
+  end
 end
