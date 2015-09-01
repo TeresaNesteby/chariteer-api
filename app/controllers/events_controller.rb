@@ -1,9 +1,13 @@
 class EventsController < ApplicationController
 
   def index
-    organization = Organization.find(params[:organization_id])
-    events = organization.events
-    render json: events, status: 200
+    organizations = Organization.all
+    # filtered_oraganization = Organization.find(params[:organization_id])
+    events = Event.all
+    filtered_events_by_category = events.where(category_id: params[:category_id])
+
+    categories = Category.all
+    render json: {filtered_events_by_category: filtered_events_by_category, events: events, organizations: organizations, categories: categories}, status: 200
   end
 
   def create
