@@ -5,9 +5,12 @@ Rails.application.routes.draw do
     get 'bananas/:much_banana' => 'volunteers#bananas'
 
     resources :categories, only: [:index, :show]
+
     get 'sessions/create' => 'sessions#create'
+
     resources :volunteers, :except => :new
 
+    match 'organizations', to: "organizations#create", via: [:options]
     resources :organizations do
       resources :events, :except => [:new, :edit]
     end
