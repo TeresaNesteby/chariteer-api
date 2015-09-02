@@ -5,5 +5,6 @@ class AddDetailsToEvents < ActiveRecord::Migration
     add_column :events, :date, :date
     add_column :events, :times, :time
     add_column :events, :num_of_volunteers_needed, :integer
+    add_column :events, :image, :string
   end
 end
