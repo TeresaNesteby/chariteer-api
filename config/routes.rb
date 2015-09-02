@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
     resources :categories, only: [:index, :show]
 
-    get 'sessions/create' => 'sessions#create'
+    # post 'sessions' => 'sessions#create'
+    resources :sessions, only: [:create, :destroy, :index]
+    match 'sessions', to: 'sessions#create', via: [:options]
 
     match 'volunteers', to: "volunteers#create", via: [:options]
     resources :volunteers, :except => :new
