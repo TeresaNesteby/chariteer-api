@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20150901033031) do
     t.datetime "updated_at",               null: false
     t.string   "org_name"
     t.string   "location"
-    t.date     "date"
-    t.time     "times"
+    t.string   "date"
+    t.string   "time"
     t.integer  "num_of_volunteers_needed"
     t.string   "image"
   end
