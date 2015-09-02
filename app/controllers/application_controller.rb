@@ -20,7 +20,6 @@ private
       request.headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, PATCH, DELETE, OPTIONS'
       request.headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version, Token, Auth-Token, Email'
       request.headers['Access-Control-Max-Age'] = '1728000'
-      # render :text => '', :content_type => 'text/plain'
     end
   end
 end
