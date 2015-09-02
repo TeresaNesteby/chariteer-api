@@ -11,7 +11,7 @@ class OrganizationsController < ApplicationController
       # organization.save
       render json: {organization: organization}
     else
-      render json: {thing: "superthing"}
+      render json: {error: "Organization was not created."}
     end
   end
 
