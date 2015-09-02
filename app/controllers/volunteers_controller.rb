@@ -4,17 +4,12 @@ class VolunteersController < ApplicationController
       render json: volunteers, status: 200
     end
 
-    def bananas
-      render json: params[:much_banana], status: 200
-    end
-
     def create
       volunteer = Volunteer.new(volunteer_params)
       if volunteer.save
-        render json: volunteer, status: 201
+        render json: {volunteer: volunteer}
       else
-        flash[:error] = "email or password is wrong"
-        render status: 404
+        render json: {error: "Volunteer was not created."}
       end
     end
 
@@ -30,6 +25,6 @@ class VolunteersController < ApplicationController
 
     private
     def volunteer_params
-      params.require(:volunteer).permit(:first_name, :last_name, :email, :interest, :photo_url, :password)
+      params.permit(:first_name, :last_name, :email, :interest, :photo_url, :password)
     end
 end

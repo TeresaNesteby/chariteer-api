@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
     get 'sessions/create' => 'sessions#create'
 
+    match 'volunteers', to: "volunteers#create", via: [:options]
     resources :volunteers, :except => :new
 
     match 'organizations', to: "organizations#create", via: [:options]
