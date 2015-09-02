@@ -13,7 +13,7 @@ class EventsController < ApplicationController
   def create
     event = Event.new(event_params)
     if event.save
-      render json: event, status: 201
+      render json: {event: event}, status: 201
     else
       render status: 404
     end
@@ -29,7 +29,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:name, :category_id, :organization_id, :org_name, :location, :date, :times, :num_of_volunteers_needed, :volunteer_id)
+    params.permit(:name, :category_id, :organization_id, :org_name, :place, :date, :time, :num_of_volunteers_needed, :volunteer_id, :image)
   end
 
 end

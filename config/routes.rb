@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     match 'organizations', to: "organizations#create", via: [:options]
     resources :organizations do
       resources :events, :except => [:new, :edit]
+      match 'events', to: 'events#create', via: [:options]
     end
 
   end
