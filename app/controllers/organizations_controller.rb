@@ -23,3 +23,5 @@ class OrganizationsController < ApplicationController
     params.permit(:name, :mission_statement, :non_profit, :phone_number, :email, :password, :website_url, :logo_image)
   end
 end
+
+
