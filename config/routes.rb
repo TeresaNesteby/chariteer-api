@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
   scope "/api" do
-    # resources :sessions
-
-    get 'bananas/:much_banana' => 'volunteers#bananas'
 
     resources :categories, only: [:index, :show]
 
-    # post 'sessions' => 'sessions#create'
     resources :sessions, only: [:create, :destroy, :index]
     match 'sessions', to: 'sessions#create', via: [:options]
 
@@ -26,7 +22,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'events#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

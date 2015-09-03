@@ -4,21 +4,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-      p "*" * 100
      volunteer = Volunteer.find_by(email_param)
-     p volunteer
-     p email_param[:email]
-     p "*" * 100
 
      organization = Organization.find_by(email: params[:email])
      if volunteer.present?
       # if volunteer.authenticate(params[:volunteer][:password])
       # Save the volunteer ID in the session so it can be used in
       # subsequent requests
-        session[:id] = volunteer.id
         volunteer.token = "OK" #SecureRandom.hex
         volunteer.save
-        p "IM INSIDE THE IF STATEMENT"
         render json: {volunteer: volunteer}, status: 200
       # end
 
@@ -38,14 +32,11 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:id] = nil
-
     if volunteer = Volunteer.find(params[:id])
       volunteer.update(token: nil)
     elsif organization = Organization.find(params[:id])
       organization.update(token: nil)
     end
-
   end
 
   private
