@@ -52,7 +52,7 @@ Event.create(name: "Habitat restoration on San Francisco's waterfront", category
 
 Event.create(name: "Support our nation's military and their families", category_id: 1, organization_id:3, volunteer_id: 1, org_name: "American Red Cross", place: "1300 Alberta Way", date: "It's flexible!", time: "We'll work with your schedule!", image: "https://www.missionmanager.com/wp-content/uploads/2015/07/American-Red-Cross.jpg")
 
-Event.create(name: "Online Organizing Intern", category_id: 5, organization_id:8, volunteer_id: 1, org_name: "Tenants Together", place: "995 Market Street, Suite 1202, San Francisco, CA 94103", date: "It's flexible!", time: "We'll work with your schedule!", image: "http://www.beyondchron.org/wp-content/uploads/news_images/2012/tenants_together.jpg")
+Event.create(name: "Online Organizing Intern", category_id: 5, organization_id:8, volunteer_id: 1, org_name: "Tenants Together", place: "995 Market Street, Suite 1202, San Francisco, CA 94103", date: "It's flexible!", time: "We'll work with your schedule!", image: "https://www.missionmanager.com/wp-content/uploads/2015/07/American-Red-Cross.jpg")
 
 Event.create(name: "Coach a team for Girls on the Run", category_id: 3, organization_id:7, volunteer_id: 1, org_name: "Girls on the Run", place: "3543 18th Street San Francisco, CA 94110", date: "Saturday, September 5, 2015 - Sunday, December 20, 2015", time: "TBD", image: "https://grassroots.groupon.com/files/2012/09/girls-on-the-run-logo.jpeg")
 
