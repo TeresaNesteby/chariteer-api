@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Volunteers
-Volunteer.create(photo_url: "http://i173.photobucket.com/albums/w46/Teresa_Nesteby/f44abec9-f718-45a4-bdb3-2acb5abc5dc7_zpspx6pha0j.jpg", first_name: "Peeper", last_name: "Ram", email: "pram@gmail.com", password: "123", interest: "Cats")
+Volunteer.create(photo_url: "http://i173.photobucket.com/albums/w46/Teresa_Nesteby/d8cc3771-57e4-4035-88c3-fffcc852f919_zpsn9gy4shx.jpg", first_name: "Peeper", last_name: "Ram", email: "pram@gmail.com", password: "123", interest: "Cats")
 Volunteer.create(photo_url: "http://designurge.com/wp-content/uploads/2014/03/smiley-face-wallpaper-001-268x300.jpg",first_name: "Gai", last_name: "Vien", email: "gai@gmail.com", password: "123", interest: "Hiking")
 
 
