@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Volunteers
-Volunteer.create(photo_url: "https://avatars2.githubusercontent.com/u/13993?v=3&s=400", first_name: "Derek", last_name: "Reeve", email: "derek@gmail.com", password: "123", interest: "Cats")
+Volunteer.create(photo_url: "http://i173.photobucket.com/albums/w46/Teresa_Nesteby/d8cc3771-57e4-4035-88c3-fffcc852f919_zpsn9gy4shx.jpg", first_name: "Peeper", last_name: "Ram", email: "pram@gmail.com", password: "123", interest: "Cats")
 Volunteer.create(photo_url: "http://designurge.com/wp-content/uploads/2014/03/smiley-face-wallpaper-001-268x300.jpg",first_name: "Gai", last_name: "Vien", email: "gai@gmail.com", password: "123", interest: "Hiking")
 
 
@@ -48,7 +48,7 @@ Category.create(category_type: "Advocacy and Human Rights")
 Event.create(name: "Coastal Cleanup Day Beach Cleanup", category_id: 2, organization_id:1, volunteer_id: 1, org_name: "Aquarium of the Bay", place: "San Francisco Bay", date: "Saturday, September 19, 2015", time: "9:00 AM-12:00 AM", image: "https://pbs.twimg.com/profile_images/3343036919/d8ba4f06f2a81fd1e9df377889855fe1_400x400.jpeg")
 Event.create(name: "Volunteer Water Quality Technician", category_id: 2, organization_id:1, volunteer_id: 1, org_name: "Golden Gate Audubon Society", place: "San Francisco Bay", date: "Saturday, September 5, 2015 and Saturday, October 3, 2015", time: "9 AM - Noon", image: "https://www.teenlife.com/media/uploads/listings//golden-gate-audubon-society/GGAS%20logo.jpg")
 
-Event.create(name: "Engage in habitat restoration on San Francisco's waterfront", category_id: 2, organization_id:2, volunteer_id: 1, org_name: "Aquarium of the Bay", place: "San Francisco Bay", date: "Saturday, September 19, 2015", time: "9:00 AM-12:00 AM", image: "https://www.teenlife.com/media/uploads/listings//golden-gate-audubon-society/GGAS%20logo.jpg")
+Event.create(name: "Engage in habitat restoration on San Francisco's waterfront", category_id: 2, organization_id:2, volunteer_id: 1, org_name: "Aquarium of the Bay", place: "San Francisco Bay", date: "Saturday, September 19, 2015", time: "9:00 AM-12:00 AM", image: "http://cdn.funcheap.com/wp-content/uploads/2013/02/megashark_31.jpg")
 
 Event.create(name: "Fulfill your passion for supporting our nation's military and their families by becoming an American", category_id: 1, organization_id:3, volunteer_id: 1, org_name: "American Red Cross", place: "1300 Alberta Way", date: "It's flexible!", time: "We'll work with your schedule!", image: "https://www.missionmanager.com/wp-content/uploads/2015/07/American-Red-Cross.jpg")
 
