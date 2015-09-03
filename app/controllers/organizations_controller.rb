@@ -1,7 +1,8 @@
 class OrganizationsController < ApplicationController
   def index
     organizations = Organization.all
-    render json: organizations, status: 200
+    events = Event.all
+    render json: {organizations: organizations, events: events}, status: 200
   end
 
   def create
