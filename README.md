@@ -24,10 +24,9 @@ A group of (four) passionate students at [Dev Bootcamp](http://devbootcamp.com/)
 1. [Rails](http://rubyonrails.org/) - Back-end API
 2. [Angular.js](https://angularjs.org/) - Front-end
 3. [Postgresql](http://www.postgresql.org/) - Database
-4. [Ruby]()
-5. [Javascript]()
-6. [HTML5]()
-7. [CSS3]()
+4. [Ruby](https://www.ruby-lang.org/en/)
+5. Javascript
+6. HTML5 and CSS3
 
 ### Team
 
