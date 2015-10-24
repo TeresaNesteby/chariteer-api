@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-
+ruby '2.0.0'
 gem 'rails', '4.2.3'
-
+gem 'rails_12factor'
 gem 'rails-api'
 
 gem 'spring', :group => :development
 
-
+gem 'httparty'
 gem 'pg'
 
 gem 'better_errors'

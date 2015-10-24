@@ -19,6 +19,8 @@ class OrganizationsController < ApplicationController
   def edit
   end
 
+
+
   private
   def organization_params
     params.permit(:name, :mission_statement, :non_profit, :phone_number, :email, :password, :website_url, :logo_image)
